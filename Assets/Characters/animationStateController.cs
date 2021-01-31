@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class animationStateController : MonoBehaviour
 {
@@ -92,5 +93,9 @@ public class animationStateController : MonoBehaviour
 
     void moveCharacter(Vector3 direction) {
         transform.Translate(direction * velocity * velocityMultiplier);
+    }
+     public void PlaySound()
+    {
+        GetComponent<AudioSource>().Play();
     }
 }
