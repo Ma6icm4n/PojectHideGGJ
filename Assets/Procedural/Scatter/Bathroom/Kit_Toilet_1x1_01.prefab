@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 175219344046956594}
   - component: {fileID: 6912861305426768901}
+  - component: {fileID: -6667928586608690972}
   m_Layer: 0
   m_Name: Kit_Toilet_1x1_01
   m_TagString: Untagged
@@ -47,6 +48,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxElement: 1
   weight: 50
+--- !u!111 &-6667928586608690972
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659022789398919816}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 02d89e62654258b418e248bc38e07a5e, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 02d89e62654258b418e248bc38e07a5e, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &5660104575801469995
 GameObject:
   m_ObjectHideFlags: 0
@@ -138,6 +155,7 @@ GameObject:
   - component: {fileID: 6153237700531719570}
   - component: {fileID: 4137936820542615787}
   - component: {fileID: 1057917838039238742}
+  - component: {fileID: 3899741461988433631}
   m_Layer: 0
   m_Name: BASE
   m_TagString: Untagged
@@ -219,3 +237,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.80187386, y: 0.9822845, z: 0.55527884}
   m_Center: {x: 0.49230185, y: 0.4896994, z: 0}
+--- !u!54 &3899741461988433631
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7008728628931369540}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

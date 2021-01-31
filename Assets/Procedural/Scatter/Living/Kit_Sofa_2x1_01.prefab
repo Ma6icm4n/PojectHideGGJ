@@ -11,8 +11,9 @@ GameObject:
   - component: {fileID: 3498473821884509073}
   - component: {fileID: 514194251452703796}
   - component: {fileID: 2361645128830030078}
-  - component: {fileID: 2079096712461231225}
   - component: {fileID: 4835152725168582504}
+  - component: {fileID: 2079096712461231225}
+  - component: {fileID: 3509208870569734216}
   m_Layer: 0
   m_Name: Kit_Sofa_2x1_01
   m_TagString: Untagged
@@ -81,19 +82,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2079096712461231225
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4307345371813490987}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.014674, y: 0.96143574, z: 2.000524}
-  m_Center: {x: -0.04843238, y: 0.48034367, z: -0.000000059604645}
 --- !u!114 &4835152725168582504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -108,3 +96,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxElement: 100
   weight: 100
+--- !u!65 &2079096712461231225
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4307345371813490987}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.014674, y: 0.96143574, z: 2.000524}
+  m_Center: {x: -0.04843238, y: 0.48034367, z: -0.000000059604645}
+--- !u!54 &3509208870569734216
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4307345371813490987}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

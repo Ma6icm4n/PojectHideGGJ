@@ -1,0 +1,134 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7575410684015411701
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7575410684015411703}
+  - component: {fileID: 7575410684015411702}
+  m_Layer: 0
+  m_Name: MapGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7575410684015411703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7575410684015411701}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7575410684015411702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7575410684015411701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9a0b0f1190008a46a3bbaced6f957d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  __________GENERATION__________: 0
+  roomQuantity: 9
+  scale: 2
+  levelSizeX: 14
+  levelSizeY: 10
+  maxIteration: 30
+  seed: 61
+  tableThreshold: 70
+  doorThreshold: 50
+  sideThreshold: 70
+  __________KITCHEN__________: 0
+  wallKitchen_2x1:
+  - {fileID: 3616267320595959157, guid: db167c42165b29140ba20f7db55366d3, type: 3}
+  wallDoorKitchen_2x1:
+  - {fileID: 2051485058663633895, guid: a9d1dfe4a960f7c45a3964ad7fcb3a31, type: 3}
+  doorKitchen_1x1:
+  - {fileID: 4152565697084665404, guid: 1434146dc476c7a45989ad4026cfba2d, type: 3}
+  furnitureWallKitchen_1x1:
+  - {fileID: 5067114170005822581, guid: b61d4da1171eeba46b5be88d03a75ff3, type: 3}
+  - {fileID: 3030286045163341105, guid: 5fd6e794207fb5c4290b0b146542e8fd, type: 3}
+  - {fileID: 2878921737520451545, guid: 9551a3ec08eaf3447bd97fa3fcaa385d, type: 3}
+  - {fileID: 4267217711872694241, guid: dc83422497c49494e849aca2410e7ff5, type: 3}
+  - {fileID: 3640987961121717536, guid: 00348622bf092ce40b9f8eed973dd927, type: 3}
+  - {fileID: 6173101518374033110, guid: b5f61315f255e80489065d04d2dc5a78, type: 3}
+  - {fileID: 8217638595632271434, guid: 3e78e5000610b5e4f9f10837f34a70ca, type: 3}
+  - {fileID: 2886706954955669430, guid: 26a306ddad2a72446b8c94551750ad88, type: 3}
+  furnitureCornerKitchen_1x1:
+  - {fileID: 6179454725822629271, guid: 196415aff7fc52449ad86a5c2ab5e301, type: 3}
+  furnitureCenterKitchen_1x1:
+  - {fileID: 569380206433422250, guid: fa56f7ecd2057ac41bc3a7cb87ec484b, type: 3}
+  - {fileID: 380143109772722538, guid: 7a673002fdacbc94286ae73302b3073a, type: 3}
+  - {fileID: 8337854998374669130, guid: 3008e60f22485a742ac176b47b2fd15b, type: 3}
+  furnitureCenterKitchen_2x1:
+  - {fileID: 378659010536354055, guid: ccc03dfdf7f95344fa75a0f48d4877f6, type: 3}
+  - {fileID: 8537802822984549382, guid: 36725a79591532747bc42df07b7b3145, type: 3}
+  - {fileID: 8866295898771160617, guid: f46526e3035af5f46badb5060043ba16, type: 3}
+  - {fileID: 4823680433869038864, guid: fa39166ad6a40904388b5331e1c871cf, type: 3}
+  - {fileID: 8820771916607977884, guid: 23873b732ec7f8c4393af9331fb3c200, type: 3}
+  - {fileID: 6128016103701326538, guid: 5d802a1ada402a04a922efc817bf508b, type: 3}
+  - {fileID: 851386104354295642, guid: 4a5ef2d476a12bf4792bb9f819ce84ec, type: 3}
+  floorKitchen_2x2:
+  - {fileID: 7415054485639882372, guid: 337fb8b881289a041ba0d83a795b4976, type: 3}
+  __________BATHROOM__________: 0
+  wallBatthroom_2x1:
+  - {fileID: 8365628782197818233, guid: 23b21f15235405e4baf947881cd88f73, type: 3}
+  wallDoorBatthroom_2x1:
+  - {fileID: 5782608063126822158, guid: 625fe4c51c6cfe14bb62e01b57a3eb48, type: 3}
+  doorBatthroom_1x1:
+  - {fileID: 4152565697084665404, guid: 1434146dc476c7a45989ad4026cfba2d, type: 3}
+  furnitureWallBatthroom_1x1:
+  - {fileID: 5067114170005822581, guid: b61d4da1171eeba46b5be88d03a75ff3, type: 3}
+  - {fileID: 3030286045163341105, guid: 5fd6e794207fb5c4290b0b146542e8fd, type: 3}
+  - {fileID: 3640987961121717536, guid: 00348622bf092ce40b9f8eed973dd927, type: 3}
+  - {fileID: 7901921193998373111, guid: a2ed063356e09d546b301214e712cc0f, type: 3}
+  - {fileID: 659022789398919816, guid: 358478929193a404ea3374d55cab17cd, type: 3}
+  - {fileID: 7470760904506645451, guid: 606d1db4a7245bb4bbf16d3ff86e19fc, type: 3}
+  - {fileID: 6173101518374033110, guid: b5f61315f255e80489065d04d2dc5a78, type: 3}
+  - {fileID: 2886706954955669430, guid: 26a306ddad2a72446b8c94551750ad88, type: 3}
+  furnitureCornerBatthroom_1x1:
+  - {fileID: 6179454725822629271, guid: 196415aff7fc52449ad86a5c2ab5e301, type: 3}
+  furnitureCenterBatthroom_1x1:
+  - {fileID: 569380206433422250, guid: fa56f7ecd2057ac41bc3a7cb87ec484b, type: 3}
+  furnitureCenterBatthroom_2x1: []
+  floorBatthroom_2x2:
+  - {fileID: 7941459826333940943, guid: 43e6c3a8739d3384d822e5a2e78201da, type: 3}
+  __________LIVING__________: 0
+  wallLiving_2x1:
+  - {fileID: 3616267320595959157, guid: db167c42165b29140ba20f7db55366d3, type: 3}
+  wallDoorLiving_2x1:
+  - {fileID: 2051485058663633895, guid: a9d1dfe4a960f7c45a3964ad7fcb3a31, type: 3}
+  doorLiving_1x1:
+  - {fileID: 4152565697084665404, guid: 1434146dc476c7a45989ad4026cfba2d, type: 3}
+  furnitureWallLiving_1x1:
+  - {fileID: 3640987961121717536, guid: 00348622bf092ce40b9f8eed973dd927, type: 3}
+  - {fileID: 5067114170005822581, guid: b61d4da1171eeba46b5be88d03a75ff3, type: 3}
+  - {fileID: 7470760904506645451, guid: 606d1db4a7245bb4bbf16d3ff86e19fc, type: 3}
+  - {fileID: 5611589276053632986, guid: ef342ecd5ca19d34e82487604e88aa72, type: 3}
+  - {fileID: 6173101518374033110, guid: b5f61315f255e80489065d04d2dc5a78, type: 3}
+  - {fileID: 2886706954955669430, guid: 26a306ddad2a72446b8c94551750ad88, type: 3}
+  furnitureCornerLiving_1x1:
+  - {fileID: 6179454725822629271, guid: 196415aff7fc52449ad86a5c2ab5e301, type: 3}
+  furnitureCenterLiving_1x1:
+  - {fileID: 3219635200877856124, guid: dadf9138a7eeff04f98da9094d83ddbd, type: 3}
+  - {fileID: 7747291362210443782, guid: 2b3c3304e37e9314988cc75bef73a8b0, type: 3}
+  - {fileID: 186747603582318524, guid: a1c102b0e6635fb478c08fae11cac36d, type: 3}
+  furnitureCenterLiving_2x1:
+  - {fileID: 4307345371813490987, guid: db2c89fd17771af44a7d85af6fe1531c, type: 3}
+  floorLiving_2x2:
+  - {fileID: 9008814528501077893, guid: 8983165cfb9e9ad438280d1ef95843b7, type: 3}

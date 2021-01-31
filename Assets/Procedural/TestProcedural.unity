@@ -156,8 +156,8 @@ Camera:
   m_GameObject: {fileID: 1355514645}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0.1522321, g: 0.15040937, b: 0.18867922, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -234,14 +234,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   __________GENERATION__________: 0
-  roomQuantity: 7
+  roomQuantity: 9
   scale: 2
   levelSizeX: 14
   levelSizeY: 10
   maxIteration: 30
-  seed: 33
-  tableThreshold: 50
-  doorThreshold: 70
+  seed: 61
+  tableThreshold: 70
+  doorThreshold: 50
   sideThreshold: 70
   __________KITCHEN__________: 0
   wallKitchen_2x1:
@@ -256,13 +256,23 @@ MonoBehaviour:
   - {fileID: 2878921737520451545, guid: 9551a3ec08eaf3447bd97fa3fcaa385d, type: 3}
   - {fileID: 4267217711872694241, guid: dc83422497c49494e849aca2410e7ff5, type: 3}
   - {fileID: 3640987961121717536, guid: 00348622bf092ce40b9f8eed973dd927, type: 3}
+  - {fileID: 6173101518374033110, guid: b5f61315f255e80489065d04d2dc5a78, type: 3}
+  - {fileID: 8217638595632271434, guid: 3e78e5000610b5e4f9f10837f34a70ca, type: 3}
+  - {fileID: 2886706954955669430, guid: 26a306ddad2a72446b8c94551750ad88, type: 3}
   furnitureCornerKitchen_1x1:
   - {fileID: 6179454725822629271, guid: 196415aff7fc52449ad86a5c2ab5e301, type: 3}
   furnitureCenterKitchen_1x1:
   - {fileID: 569380206433422250, guid: fa56f7ecd2057ac41bc3a7cb87ec484b, type: 3}
+  - {fileID: 380143109772722538, guid: 7a673002fdacbc94286ae73302b3073a, type: 3}
+  - {fileID: 8337854998374669130, guid: 3008e60f22485a742ac176b47b2fd15b, type: 3}
   furnitureCenterKitchen_2x1:
   - {fileID: 378659010536354055, guid: ccc03dfdf7f95344fa75a0f48d4877f6, type: 3}
   - {fileID: 8537802822984549382, guid: 36725a79591532747bc42df07b7b3145, type: 3}
+  - {fileID: 8866295898771160617, guid: f46526e3035af5f46badb5060043ba16, type: 3}
+  - {fileID: 4823680433869038864, guid: fa39166ad6a40904388b5331e1c871cf, type: 3}
+  - {fileID: 8820771916607977884, guid: 23873b732ec7f8c4393af9331fb3c200, type: 3}
+  - {fileID: 6128016103701326538, guid: 5d802a1ada402a04a922efc817bf508b, type: 3}
+  - {fileID: 851386104354295642, guid: 4a5ef2d476a12bf4792bb9f819ce84ec, type: 3}
   floorKitchen_2x2:
   - {fileID: 7415054485639882372, guid: 337fb8b881289a041ba0d83a795b4976, type: 3}
   __________BATHROOM__________: 0
@@ -279,6 +289,8 @@ MonoBehaviour:
   - {fileID: 7901921193998373111, guid: a2ed063356e09d546b301214e712cc0f, type: 3}
   - {fileID: 659022789398919816, guid: 358478929193a404ea3374d55cab17cd, type: 3}
   - {fileID: 7470760904506645451, guid: 606d1db4a7245bb4bbf16d3ff86e19fc, type: 3}
+  - {fileID: 6173101518374033110, guid: b5f61315f255e80489065d04d2dc5a78, type: 3}
+  - {fileID: 2886706954955669430, guid: 26a306ddad2a72446b8c94551750ad88, type: 3}
   furnitureCornerBatthroom_1x1:
   - {fileID: 6179454725822629271, guid: 196415aff7fc52449ad86a5c2ab5e301, type: 3}
   furnitureCenterBatthroom_1x1:
@@ -298,10 +310,14 @@ MonoBehaviour:
   - {fileID: 5067114170005822581, guid: b61d4da1171eeba46b5be88d03a75ff3, type: 3}
   - {fileID: 7470760904506645451, guid: 606d1db4a7245bb4bbf16d3ff86e19fc, type: 3}
   - {fileID: 5611589276053632986, guid: ef342ecd5ca19d34e82487604e88aa72, type: 3}
+  - {fileID: 6173101518374033110, guid: b5f61315f255e80489065d04d2dc5a78, type: 3}
+  - {fileID: 2886706954955669430, guid: 26a306ddad2a72446b8c94551750ad88, type: 3}
   furnitureCornerLiving_1x1:
   - {fileID: 6179454725822629271, guid: 196415aff7fc52449ad86a5c2ab5e301, type: 3}
   furnitureCenterLiving_1x1:
   - {fileID: 3219635200877856124, guid: dadf9138a7eeff04f98da9094d83ddbd, type: 3}
+  - {fileID: 7747291362210443782, guid: 2b3c3304e37e9314988cc75bef73a8b0, type: 3}
+  - {fileID: 186747603582318524, guid: a1c102b0e6635fb478c08fae11cac36d, type: 3}
   furnitureCenterLiving_2x1:
   - {fileID: 4307345371813490987, guid: db2c89fd17771af44a7d85af6fe1531c, type: 3}
   floorLiving_2x2:
@@ -318,97 +334,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1995576878
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1995576880}
-  - component: {fileID: 1995576879}
-  m_Layer: 0
-  m_Name: Directional Light
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!108 &1995576879
-Light:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1995576878}
-  m_Enabled: 1
-  serializedVersion: 10
-  m_Type: 1
-  m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 1
-  m_Range: 10
-  m_SpotAngle: 30
-  m_InnerSpotAngle: 21.80208
-  m_CookieSize: 10
-  m_Shadows:
-    m_Type: 2
-    m_Resolution: -1
-    m_CustomResolution: -1
-    m_Strength: 1
-    m_Bias: 0.05
-    m_NormalBias: 0.4
-    m_NearPlane: 0.2
-    m_CullingMatrixOverride:
-      e00: 1
-      e01: 0
-      e02: 0
-      e03: 0
-      e10: 0
-      e11: 1
-      e12: 0
-      e13: 0
-      e20: 0
-      e21: 0
-      e22: 1
-      e23: 0
-      e30: 0
-      e31: 0
-      e32: 0
-      e33: 1
-    m_UseCullingMatrixOverride: 0
-  m_Cookie: {fileID: 0}
-  m_DrawHalo: 0
-  m_Flare: {fileID: 0}
-  m_RenderMode: 0
-  m_CullingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RenderingLayerMask: 1
-  m_Lightmapping: 4
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
-  m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
-  m_UseBoundingSphereOverride: 0
-  m_ShadowRadius: 0
-  m_ShadowAngle: 0
---- !u!4 &1995576880
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1995576878}
-  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

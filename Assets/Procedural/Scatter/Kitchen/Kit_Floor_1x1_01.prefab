@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 6486199400380248987}
   - component: {fileID: 9072339497531000657}
   - component: {fileID: -2945688295696811117}
-  - component: {fileID: -2984101970440099187}
-  - component: {fileID: -3189446943168440465}
+  - component: {fileID: 5105458725994271608}
+  - component: {fileID: 2159332278325520176}
   m_Layer: 0
   m_Name: Kit_Floor_1x1_01
   m_TagString: Untagged
@@ -96,7 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxElement: 100
   weight: 100
---- !u!65 &-2984101970440099187
+--- !u!65 &5105458725994271608
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,7 +109,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.9982864, y: 0.037388273, z: 1.9909484}
   m_Center: {x: 0, y: -0.0106224045, z: 0}
---- !u!54 &-3189446943168440465
+--- !u!54 &2159332278325520176
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

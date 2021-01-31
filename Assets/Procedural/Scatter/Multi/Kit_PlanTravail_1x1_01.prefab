@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1879093786436823919}
   - component: {fileID: 8510597529933075990}
   - component: {fileID: 193048359819505645}
+  - component: {fileID: 8183462206718652823}
   m_Layer: 0
   m_Name: BASE
   m_TagString: Untagged
@@ -93,6 +94,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.7708086, y: 0.98848873, z: 0.9973856}
   m_Center: {x: -0.06459573, y: 0.49424437, z: 0.00000028312206}
+--- !u!54 &8183462206718652823
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3329093937625922745}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5067114170005822581
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,6 +120,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5555702311742588623}
   - component: {fileID: -8557578854203083110}
+  - component: {fileID: -4746196149169850919}
   m_Layer: 0
   m_Name: Kit_PlanTravail_1x1_01
   m_TagString: Untagged
@@ -141,6 +159,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxElement: 100
   weight: 100
+--- !u!111 &-4746196149169850919
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5067114170005822581}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 313092c6b246fe340a66ec55d01e1844, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 313092c6b246fe340a66ec55d01e1844, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &7564982277424076815
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +186,6 @@ GameObject:
   - component: {fileID: 7023262857689943767}
   - component: {fileID: 9165211349469296111}
   - component: {fileID: 3259751712018783185}
-  - component: {fileID: 2813320891388213990}
   m_Layer: 0
   m_Name: R_DOOR
   m_TagString: Untagged
@@ -221,19 +254,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &2813320891388213990
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7564982277424076815}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.09984112, y: 0.8194526, z: 0.43857422}
-  m_Center: {x: 0.044980966, y: -0.00000014901161, z: -0.219287}
 --- !u!1 &9121704706539707961
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +265,6 @@ GameObject:
   - component: {fileID: 674861270286888433}
   - component: {fileID: 8221680336081291355}
   - component: {fileID: 2463094691743721342}
-  - component: {fileID: 3442186954863178513}
   m_Layer: 0
   m_Name: L_DOOR
   m_TagString: Untagged
@@ -314,16 +333,3 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &3442186954863178513
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9121704706539707961}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.09984181, y: 0.8194526, z: 0.43857422}
-  m_Center: {x: 0.044980798, y: -0.00000014901161, z: 0.219287}

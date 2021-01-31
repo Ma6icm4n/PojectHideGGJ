@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3222374726726767971}
   - component: {fileID: -1260628530097380722}
+  - component: {fileID: 7557746892814971880}
   m_Layer: 0
   m_Name: Kit_Oven_1x1_01
   m_TagString: Untagged
@@ -47,6 +48,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxElement: 2
   weight: 200
+--- !u!111 &7557746892814971880
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2878921737520451545}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 89500bd78a6d3154db4c239936f924c5, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 89500bd78a6d3154db4c239936f924c5, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &5733834532501352213
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,6 +76,7 @@ GameObject:
   - component: {fileID: 8913218203324315843}
   - component: {fileID: 1709760579691824570}
   - component: {fileID: 1859210999678237410}
+  - component: {fileID: 4515078798492306397}
   m_Layer: 0
   m_Name: BASE
   m_TagString: Untagged
@@ -140,6 +158,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.93543506, y: 1.0479072, z: 1.0136238}
   m_Center: {x: 0.017717555, y: 0.5239536, z: 0}
+--- !u!54 &4515078798492306397
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5733834532501352213}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &6942886731858925946
 GameObject:
   m_ObjectHideFlags: 0

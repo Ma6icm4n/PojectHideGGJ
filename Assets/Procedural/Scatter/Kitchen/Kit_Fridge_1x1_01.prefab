@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3491384047100038491}
   - component: {fileID: -7581210941613388429}
+  - component: {fileID: -8150151564412028135}
   m_Layer: 0
   m_Name: Kit_Fridge_1x1_01
   m_TagString: Untagged
@@ -47,6 +48,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxElement: 2
   weight: 200
+--- !u!111 &-8150151564412028135
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4267217711872694241}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 406ddbcec448b0b4c8ddcc378d5cd35e, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 406ddbcec448b0b4c8ddcc378d5cd35e, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &6005941355644172077
 GameObject:
   m_ObjectHideFlags: 0
@@ -59,6 +76,7 @@ GameObject:
   - component: {fileID: 7456222981808922875}
   - component: {fileID: 824587296951803266}
   - component: {fileID: 5390058954852220892}
+  - component: {fileID: 4459724511879471019}
   m_Layer: 0
   m_Name: BASE
   m_TagString: Untagged
@@ -140,6 +158,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.90385705, y: 1.6865768, z: 1}
   m_Center: {x: 0.0019285083, y: 0.8432884, z: 0}
+--- !u!54 &4459724511879471019
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6005941355644172077}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8976194425962791234
 GameObject:
   m_ObjectHideFlags: 0

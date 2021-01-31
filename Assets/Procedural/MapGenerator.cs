@@ -28,6 +28,8 @@ public class MapGenerator : MonoBehaviour
     public int tableThreshold = 50;
     public int doorThreshold = 50;
     public int sideThreshold = 50;
+    public int coin = 5;
+    public GameObject coinPrefab;
 
     [Header("Kitchen")]
     public bool __________KITCHEN__________ = false;
@@ -73,12 +75,11 @@ public class MapGenerator : MonoBehaviour
     private List<List<List<int>>> bathroomFurnitureCount = new List<List<List<int>>>();
     private List<List<List<int>>> livingFurnitureCount = new List<List<List<int>>>();
     private List<int> roomLink = new List<int>();
+    private List<(float X, float Y)> availableTiles = new List<(float X, float Y)>();
 
     // Start is called before the first frame update
     void Start()
     {
-        Random.InitState(seed);
-
         initializeRooms();
         extendRooms();
         placeDoors();
@@ -133,9 +134,30 @@ public class MapGenerator : MonoBehaviour
                     int type = Random.Range(0, 1000) % 3;
                     roomTypes.Add(type);
 
-                    if (type == 0) { kitchenFurnitureCount.Add(new List<List<int>>()); }
-                    else if (type == 1) { bathroomFurnitureCount.Add(new List<List<int>>()); }
-                    else if (type == 2) { livingFurnitureCount.Add(new List<List<int>>()); }
+                    GameObject lightGameObject = new GameObject("PointLight");
+                    Light pointLight = lightGameObject.AddComponent<Light>();
+                    pointLight.type = LightType.Point;
+                    lightGameObject.transform.Translate(new Vector3(selectedRoomX * scale, 3, selectedRoomY * scale));
+
+
+                    if (type == 0)
+                    {
+                        kitchenFurnitureCount.Add(new List<List<int>>());
+                        pointLight.color = new Color(0.9f, 0.7f, 0.7f, 1.0f);
+                        pointLight.intensity = 0.6f;
+                    }
+                    else if (type == 1)
+                    {
+                        bathroomFurnitureCount.Add(new List<List<int>>());
+                        pointLight.color = new Color(0.5f, 0.6f, 0.8f, 1.0f);
+                        pointLight.intensity = 0.6f;
+                    }
+                    else if (type == 2)
+                    {
+                        livingFurnitureCount.Add(new List<List<int>>());
+                        pointLight.color = new Color(0.7f, 0.7f, 0.5f, 1.0f);
+                        pointLight.intensity = 0.4f;
+                    }
                 }
                 iterationCount++;
             }
@@ -340,17 +362,17 @@ public class MapGenerator : MonoBehaviour
                         bool isNewNeighbour = true;
 
                         // For each already appended
-                        for(int roomWall = 0; roomWall < roomWalls.Count; roomWall++)
+                        for (int roomWall = 0; roomWall < roomWalls.Count; roomWall++)
                         {
                             // If the room as already been appended
-                            if(roomWalls[roomWall].room != neighbourRoomIDs[neighbour]) { continue; }
-                                
+                            if (roomWalls[roomWall].room != neighbourRoomIDs[neighbour]) { continue; }
+
                             roomWalls[roomWall].tiles.Add((coordX, coordY, relativePoses[neighbour]));
                             isNewNeighbour = false;
                             break;
                         }
 
-                        if(isNewNeighbour)
+                        if (isNewNeighbour)
                         {
                             roomWalls.Add((neighbourRoomIDs[neighbour], new List<(int X, int Y, int direction)> { (coordX, coordY, relativePoses[neighbour]) }));
                         }
@@ -364,7 +386,7 @@ public class MapGenerator : MonoBehaviour
             {
                 int chosenTile = Random.Range(0, roomWall.tiles.Count - 1);
 
-                if(Random.Range(0, 100) < doorThreshold)
+                if (Random.Range(0, 100) < doorThreshold)
                 {
                     doors.Add((roomWall.tiles[chosenTile].X, roomWall.tiles[chosenTile].Y, roomWall.tiles[chosenTile].direction));
                 }
@@ -455,7 +477,7 @@ public class MapGenerator : MonoBehaviour
                 int verticalCount = 0;
                 for (int neighbour = 0; neighbour < neighbourRoomIDs.Count; neighbour++)
                 {
-                    if(neighbourRoomIDs[neighbour] != rooms[coordX, coordY])
+                    if (neighbourRoomIDs[neighbour] != rooms[coordX, coordY])
                     {
                         isAgainstWall = true;
                         if (relativePoses[neighbour] == 0 || relativePoses[neighbour] == 2) { horizontalCount++; }
@@ -480,7 +502,7 @@ public class MapGenerator : MonoBehaviour
 
                 for (int cornerNeighbour = 0; cornerNeighbour < neighbourCornerRoomIDs.Count; cornerNeighbour++)
                 {
-                    if(neighbourCornerRoomIDs[cornerNeighbour] != rooms[coordX, coordY])
+                    if (neighbourCornerRoomIDs[cornerNeighbour] != rooms[coordX, coordY])
                     {
                         isAtCenter = false;
                     }
@@ -518,7 +540,7 @@ public class MapGenerator : MonoBehaviour
                 if (!isCorridor && !isAgainstWall && isAtCenter)
                 {
                     // Here we want to place a double table
-                    if(Random.Range(0, 100) < tableThreshold)
+                    if (Random.Range(0, 100) < tableThreshold)
                     {
                         int orientation = Random.Range(0, 100);
 
@@ -586,14 +608,14 @@ public class MapGenerator : MonoBehaviour
                             {
                                 float positionX = (float)coordX * scale + (subCoordX - 0.5f);
                                 float positionZ = (float)coordY * scale + (subCoordY - 0.5f);
-                                instanciatePrefab(AssetType.furnitureCenter_1x1, new Vector3(positionX, 0.0f, positionZ), Quaternion.identity, rooms[coordX, coordY]);
+                                instanciatePrefab(AssetType.furnitureCenter_1x1, new Vector3(positionX, 0.0f, positionZ), Quaternion.AngleAxis(Random.Range(0, 100) * 90, Vector3.up), rooms[coordX, coordY]);
                             }
                         }
                     }
                 }
 
                 // ________    IF THE TILE IS AGAINST A WALL     ________
-                if (!isCorridor && isAgainstWall && !isDoor)
+                else if (!isCorridor && isAgainstWall && !isDoor)
                 {
                     // Loop over all the subTiles
                     for (int i = 0; i < 4; i++)
@@ -627,7 +649,11 @@ public class MapGenerator : MonoBehaviour
                         // If the subtile is a corner
                         if (subtileType != 1 && subtileType != 2 && subtileType != 4 && subtileType != 8 && subtileType != 0)
                         {
-                            if (Random.Range(0, 100) > sideThreshold) { continue; }
+                            if (Random.Range(0, 100) > sideThreshold)
+                            {
+                                availableTiles.Add(((float)coordX * scale + (subCoordX - 0.5f), (float)coordY * scale + (subCoordY - 0.5f)));
+                                continue;
+                            }
 
                             float positionX = (float)coordX * scale + (subCoordX - 0.5f);
                             float positionZ = (float)coordY * scale + (subCoordY - 0.5f);
@@ -640,7 +666,11 @@ public class MapGenerator : MonoBehaviour
                         // If the subtile is along a wall
                         else if (subtileType == 1 || subtileType == 2 || subtileType == 4 || subtileType == 8)
                         {
-                            if(Random.Range(0, 100) > sideThreshold) { continue; }
+                            if (Random.Range(0, 100) > sideThreshold)
+                            {
+                                availableTiles.Add(((float)coordX * scale + (subCoordX - 0.5f), (float)coordY * scale + (subCoordY - 0.5f)));
+                                continue;
+                            }
 
                             if (subtileType == 1)
                             {
@@ -669,10 +699,17 @@ public class MapGenerator : MonoBehaviour
                         }
                     }
                 }
+                else { availableTiles.Add((coordX * scale, coordY * scale)); }
 
                 // Place the floor
-                instanciatePrefab(AssetType.floor_2x2, new Vector3(coordX * scale, 0, coordY * scale), Quaternion.identity, rooms[coordX, coordY]);
+                instanciatePrefab(AssetType.floor_2x2, new Vector3(coordX * scale, 0.0f, coordY * scale), Quaternion.identity, rooms[coordX, coordY]);
             }
+        }
+
+        shuffleList(ref availableTiles);
+        for (int i = 0; i < availableTiles.Count && i < coin; i++)
+        {
+            Instantiate(coinPrefab, new Vector3(availableTiles[i].X, 0.0f, availableTiles[i].Y), Quaternion.identity);
         }
     }
 
@@ -849,10 +886,10 @@ public class MapGenerator : MonoBehaviour
                 prefabInstanceCount = livingFurnitureCount[roomLink[room]][(int)asset][prefab];
             }
 
-            if(prefabInstanceCount >= prefabInfo.maxElement) 
+            if (prefabInstanceCount >= prefabInfo.maxElement)
             {
                 toRemove.Add(prefab);
-                continue; 
+                continue;
             }
 
             // Append its index
@@ -923,6 +960,19 @@ public class MapGenerator : MonoBehaviour
             n--;
             int k = Random.Range(0, n + 1);
             (int room, List<(int X, int Y, int direction)> tiles) value = list[k];
+            list[k] = list[n];
+            list[n] = value;
+        }
+    }
+
+    private void shuffleList(ref List<(float X, float Y)> list)
+    {
+        int n = list.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = Random.Range(0, n + 1);
+            (float X, float Y) value = list[k];
             list[k] = list[n];
             list[n] = value;
         }

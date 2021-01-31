@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 4747275786179838618}
   - component: {fileID: 7351353869001094736}
   - component: {fileID: 8037828037282828366}
-  - component: {fileID: 2476069001110743235}
-  - component: {fileID: 3219112379601325963}
+  - component: {fileID: 5257046483353551750}
+  - component: {fileID: 8546601718063145342}
   m_Layer: 0
   m_Name: Kit_Floor_1x1_03
   m_TagString: Untagged
@@ -96,7 +96,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxElement: 100
   weight: 100
---- !u!54 &2476069001110743235
+--- !u!65 &5257046483353551750
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9008814528501077893}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.9930766, y: 0.03087408, z: 1.9930767}
+  m_Center: {x: 0, y: -0.01543704, z: 0}
+--- !u!54 &8546601718063145342
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,16 +125,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &3219112379601325963
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9008814528501077893}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.9930766, y: 0.03087408, z: 1.9930767}
-  m_Center: {x: 0, y: -0.01543704, z: 0}
